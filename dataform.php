@@ -20,21 +20,13 @@ body{
 	font-size: 30px;
 }
  
-.kotak_form{
+.card{
 	width: 350px;
 	background: white;
 	margin: 80px auto;
 	padding: 30px 20px;
 }
-.tombol_login{
-	background: #FF00FF;
-	color: white;
-	font-size: 11pt;
-	width: 100%;
-	border: none;
-	border-radius: 3px;
-	padding: 10px 20px;
-}
+
 	</style>
 </head>
 <body>
