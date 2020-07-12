@@ -1,112 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>form</title>
+	<title>TUGAS 3</title>
 	<style type="text/css">
-		body{
-			margin: 0px;
-			padding: 0px;
-		}
-		.header{
-			width: 100%;
-			height: 70px;
-			background-color: #696969;
-			color: white;
-			font-size: 35px;
-			text-align: center;
-			font-weight: bold;
-			line-height: 40px;
-		}
-		.content{
-			width: 500px;
-			height: 400px;
-			background: white;
-			margin: 80px auto;
-			padding: 30px 20px;
-			border: solid 3px black;
-		}
-		.tombol_daftar{
-			background: #696969;
-			color: white;
-			font-size: 11pt;
-			width: 200px;
-			border: none;
-			border-radius: 3px;
-			padding: 10px 20px;
+	body{
+	margin: 0px;
+	padding: 0px;
+	background-image: url(back.jfif);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: sans-serif;
 
-		}
+}	
+.header{
+width: 100%;
+height: 70px;
+background-color: #696969;
+color: white;
+font-size: 35px;
+text-align: center;
+font-weight: bold;
+line-height: 40px;
 
-		.footer{
-			width: 100%;
-			height: 70px;
-			background-color:#696969;
-			color: white;
-			text-align: center;
-			font-size: 20px;
-			line-height: 40px;
-			font-family: chiller;
-
-		}
-	</style>
+}
+ 
+	.tulisan_form{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 30px;
+}
+ 
+.kotak_form{
+	width: 500px;
+	background: white;
+	margin: 80px auto;
+	padding: 30px 20px;
+}
+.tombol_login{
+	background: #696969;
+	color: white;
+	font-size: 11pt;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+</style>
 
 </head>
 <body>
-	<div class="header">FORM PENDAFTARAN PUSKESMAS</div>
-	<div class="content">
-		<form method="POST" action="proses.php">
-	<table align="center">
-		<h2 align="center">FORM PENDAFTARAN</h2>
-		<tr>
-			<td>Nama Lengkap</td><td>:</td> <td><input type="text" name="nama"></td>
-		</tr>
-		<tr>
-			<td>Tempat Tanggal Lahir</td><td>:</td> <td><input type="text" name="ttl"></td>
-		</tr>
-		<tr>
-			<td>NIK</td><td>:</td> <td><input type="text" name="nik"></td>
-		</tr>
-		<tr>
-			<td>Golongan Darah</td><td>:</td> <td>
-				<input type="radio" id="A" name="Golongan" value="A">A
-				<input type="radio" id="B" name="Golongan" value="B">B
-				<input type="radio" id="AB" name="Golongan" value="AB">AB
-				<input type="radio" id="O" name="Golongan" value="O">O
-		</tr>
-
-		<tr>
-			<td>Jaminan Kesehatan</td><td>:</td> <td>
-				<input type="radio" id="BPJS" name="jaminankesehatan" value="BPJS">BPJS
-				<input type="radio" id="ASKES" name="jaminankesehatan" value="ASKES">ASKES
-				<input type="radio" id="JAMKESMAS" name="jaminankesehatan" value="JAMKESMAS">JAMKESMAS
-				<input type="radio" id="KIS" name="jaminankesehatan" value="KIS">KIS
-		</tr>
-		<tr>
-			<td>No Kartu Jamkes</td><td>:</td> <td><input type="text" name="nokartu"></td>
-		</tr>
-		<tr>
-			<td>Jenis Kelamin</td><td>:</td> <td>
-				<input type="radio" id="Perempuan" name="jeniskelamin" value="perempuan">Perempuan
-				<input type="radio" id="lakilaki" name="jeniskelamin" value="lakilaki">Laki-Laki
-		</tr>
-		<tr>
-			<td>Alamat</td><td>:</td> <td><input  type="text" name="alamat"></td>
-		</tr>
-		<tr>
-			<td>No Telp</td><td>:</td> <td><input  type="text" name="notelp"></td>
-		</tr><br>
-
-		<tr>
-		<td> &nbsp </td> <td> &nbsp </td> <td><input type="submit" class="tombol_daftar" value="DAFTAR" ></td>
-		</tr>
-
-
-
-	</table>
-	</form>
+	<div class="header">
+		PENDAFTARAN ONLINE PUSKEMAS		
 	</div>
 	
-	<div class="footer">
-		Copyright @JihanWala | 1900018003
+	<div class="kotak_form">
+		<p class="tulisan_form">FORM PASIEN </p>
+	<form method="POST" action="dataform.php">
+
+		<div> <label for="name">Nama Lengkap</label>
+		<label>:</label>
+		<input type="text" name="name" size="25"></div><br>
+
+		<div> <label for="nik">NIK :</label>
+		<input type="text" name="nik"> </div><br>
+
+		<div><label for="jaminankesehatan">Jaminan Kesehatan : </label>
+			<input type="radio" id="BPJS" name="jaminankesehatan" value="BPJS">
+			<label for="BPJS">BPJS</label>
+			<input type="radio" id="ASKES" name="jaminankesehatan" value="ASKES">
+			<label for="ASKES">ASKES</label>
+			<input type="radio" id="JAMKESMAS" name="jaminankesehatan" value="JAMKESMAS">
+			<label for="JAMKESMAS">JAMKESMAS</label>
+			<input type="radio" id="KIS" name="jaminankesehatan" value="KIS">
+			<label for="KIS">KIS</label>			
+		</div><br>
+
+		<div><label for="nokartu">NO Kartu Jamikes :</label>
+		<input type="text" name="nokartu" size="25"></div><br>
+
+
+		<div> <label for="jnskelamin">Jenis Kelamin :</label>
+		<input type="radio" id="laki-laki" name="jnskelamin" value="laki-laki">
+		<label for="laki-laki">Laki-Laki</label>
+		<input type="radio" id="perempuan" name="jnskelamin" value="perempuan"> 
+		<label for="radio">Perempuan</label>
+		</div><br>
+
+		<div><label for="umur">Umur :</label>
+		<input type="text" name="umur" size="15"></div><br>
+
+		<div><label for="alamat">Alamat :</label> 
+			<input type="text" name="alamat" height="10" width="15">
+		</div><br>
+
+		<div><label for="gejala"><b></b><b>Gejala </b>:</label>
+		<textarea name="gejala"></textarea></div>
+		<br><br>
+
+<input type="submit" class="tombol_login" value="LOGIN">
+
+	
+
+	</form>
 	</div>
 
 </body>
